@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+    <script data-require="jquery" data-semver="3.1.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+    // Add your javascript here
+$(function() {
+
+  var languages = [];
+  var items = document.getElementsByTagName('li');
+  
+  for (var l = 0; l < items.length; l++) {
+    languages.push(items[l].innerHTML);
+  }
+  
+  languages.sort();
+  
+  for (var i = 0; i < languages.length; i++) {
+    items[i].innerHTML = languages[i];
+  }
+
+});</script>
+  </head>
+
+  <body>
+
+    <ul>
+      <li>Z</li>
+      <li>A</li>      
+      <li>B</li>
+      <li>C</li>
+    </ul>
+
+
+  </body>
+
+</html>
