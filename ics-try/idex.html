@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ICS try</title>
+<script type='text/javascript' src='https://code.jquery.com/jquery-1.11.3.js'></script>
+
+<script type="text/javascript" src="icsFormatter.js"></script>
+
+
+</head>
+
+<body>
+<header class="entry-header">
+		<h1 class="entry-title">test</h1>	</header>
+        <div class="ai1ec-field-value ai1ec-col-sm-9 dt-duration">
+			May 14, 2017 @ 5:14 pm – 6:14 pm
+							<div class="ai1ec-recurrence ai1ec-btn-group">
+		<button class="ai1ec-btn ai1ec-btn-default ai1ec-btn-xs
+			ai1ec-tooltip-trigger ai1ec-disabled ai1ec-text-muted" data-html="true" title="Monthly on 1st Monday, forever">
+			<i class="ai1ec-fa ai1ec-fa-repeat"></i>
+			Repeats
+		</button>
+
+					<a class="ai1ec-btn ai1ec-btn-default ai1ec-btn-xs ai1ec-tooltip-trigger
+				ai1ec-text-muted" title="Edit this occurrence (May 31)" href="https://jlsone.wpengine.com/wp-admin/post.php?post=145&amp;action=edit&amp;instance=1">
+				<i class="ai1ec-fa ai1ec-fa-pencil"></i>
+			</a>
+			</div>
+		</div>
+        <div class="ai1ec-hidden dt-start">2017-05-13T17:14:00-04:00</div>
+        <div class="ai1ec-hidden dt-end">2017-05-14T18:14:00-04:00</div>
+        
+
+<button type="button" class="button" download>Click Me!</button>
+<script type="text/javascript" src="demo.js"></script>
+<script>
+ msgData1 = $('.dt-start').text();
+    msgData2 = $('.dt-end').text();
+    msgData3 = $('.Location').text();
+
+    var icsMSG = "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-\nBEGIN:VEVENT\nDTSTAMP:20120315T170000Z\nDTSTART:" + msgData1 +"\nDTEND:" + msgData2 +"\nLOCATION:" + msgData3 + "\nSUMMARY:title\nEND:VEVENT\nEND:VCALENDAR";
+
+    $('.button').click(function(){
+		window.open( "data:text/calendar;charset=utf8," + escape(icsMSG));
+    });
+	</script>
+</body>
+</html>

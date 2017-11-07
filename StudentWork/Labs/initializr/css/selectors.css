@@ -1,0 +1,35 @@
+/*add selectors*/
+aside p > a[href$=".html"] {
+    font-weight: normal;
+}
+
+#petbio :target {
+    background-color: #039;
+    color: white;
+    font-style: italic;
+    padding: 4px;
+}
+
+#petbio img[src$=".jpg"] {
+    border: 1px solid #ccc;
+    float: right;
+    margin: 3px;
+    border-radius: 5px;
+}
+
+/*add structural pseudo-classes*/
+
+
+
+/*every two, except the last one*/
+
+
+/*last one, where 1 represents n*/
+
+
+
+
+
+
+
+

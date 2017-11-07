@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>QUnit Example</title>
+  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.4.1.css">
+  <script>
+  var car1 = {
+year: 2000,
+make: 'Ford',
+model: 'Fusion',
+getInfo: function () {
+return 'Vehicle: ' + this.year + ' ' + this.make + ' ' + this.model;
+}
+};
+
+var car2 = {
+year: 2010,
+make: 'BMW',
+model: 'Z4',
+getInfo: function () {
+return 'Vehicle: ' + this.year + ' ' + this.make + ' ' + this.model;
+}
+};
+  
+  </script>
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="https://code.jquery.com/qunit/qunit-2.4.1.js"></script>
+  <script src="tests.js"></script>
+</body>
+</html>

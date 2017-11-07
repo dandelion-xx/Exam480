@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<style>
+#grid {
+display: -ms-grid;
+-ms-grid-columns: 100px 100px 100px;
+-ms-grid-rows: 50px 50px 50px;
+}
+
+#text {
+-ms-grid-row: 1;
+-ms-grid-column: 1;
+-ms-grid-column-span: 3;
+-ms-grid-row-span: 3;
+}
+
+#bluebox {
+background: blue;
+-ms-grid-row: 2;
+-ms-grid-column: 2;
+-ms-wrap-flow: auto;
+}
+</style>
+<body>
+
+
+
+<div id="grid">
+<div id="text">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+</div> 
+<div id="bluebox">
+</div> 
+</div>
+
+
+
+</body>
+</html>

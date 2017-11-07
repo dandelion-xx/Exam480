@@ -1,0 +1,76 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+	<meta charset=utf-8>
+	<title>html5 Simple Bar Chart - canvas</title>	
+	<style>
+		#graphSpace { 
+		margin-left:80px; 
+		border:5px solid #aaa;
+		}
+	</style>
+	
+	<!-- Add Canvas API code here -->
+	<script type="text/javascript">
+	    function graph() {							
+			var graphCanvas = document.getElementById('graphSpace');
+			// Ensure that the element is available within the DOM
+			if (graphCanvas && graphCanvas.getContext) {
+				// Open a 2D context within the canvas
+				var context = graphCanvas.getContext('2d');
+
+				// Bar chart data
+				var data = new Array(5);
+				data[0] = "Audio API,200";
+				data[1] = "Storage API,120";
+				data[2] = "Drag&Drop API,80";
+				data[3] = "Video API,230";
+				data[4] = "Canvas API,345";
+				
+				// Draw the bar chart
+				drawBarChart(context, data, 50, 100, (graphCanvas.height - 20), 50);
+			}
+		}
+		
+		// drawBarChart - draws a bar chart with the specified data
+		function drawBarChart(context, data, startX, barWidth, chartHeight, markDataIncrementsIn) {
+			// Draw the x and y axes
+			context.lineWidth = "1.0";
+			var startY = 380;
+			drawLine(context, startX, startY, startX, 30); 
+			drawLine(context, startX, startY, 570, startY);			
+			context.lineWidth = "0.0";
+			var maxValue = 0;
+			for (var i=0; i<data.length; i++) {
+				// Extract the data
+				var values = data[i].split(",");
+				var name = values[0];
+				var height = parseInt(values[1]);
+				if (parseInt(height) > parseInt(maxValue)) maxValue = height;
+				// Write data to chart
+				context.fillStyle = "#b90000";
+				drawRectangle(context, startX + (i * barWidth) + i, (chartHeight - height), barWidth, height, true);
+				// Add the column title to the x-axis
+				context.textAlign = "left";
+				context.fillStyle = "#000";
+				context.fillText(name, startX + (i * barWidth) + i, chartHeight + 10, 200);				
+			}
+			// Add some data markers to the y-axis
+			var numMarkers = Math.ceil(maxValue / markDataIncrementsIn);
+			context.textAlign = "right";
+			context.fillStyle = "#000";
+			var markerValue = 0;
+			for (var i=0; i<numMarkers; i++) {		
+				context.fillText(markerValue, (startX - 5), (chartHeight - markerValue), 50);
+				markerValue += markDataIncrementsIn;
+			}
+		}
+	</script>
+</head>
+<body onLoad="graph();">
+	<article>
+		<h1>HTML5 JavaScript API</h1>
+		<!-- Add Canvas tag here -->				
+	</article>
+</body>
+</html> 

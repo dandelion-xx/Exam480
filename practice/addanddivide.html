@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script type="text/javascript">
+onerror =unhandled;
+function unhandled (msg, url, line){
+	alert ("There has been an unhandled exception.");
+	}
+function add(){
+	alert($("#int1").val() + $("#int2").val());
+}
+function divide(){	
+	if (isNaN($("#int1").val())	|| isNaN($("#int2").val())){
+		throw('one or more values are non-number');
+			}
+			alert($("#int1").val()/$("#int2").val());
+		}
+</script>
+</head>
+
+<body>
+Integer 1: <input type="text" id="int1"/><br/>
+Integer 2: <input type="text" id="int2"/><br/><br/>
+<input type="button" name="add" value="Add" onclick="add();"/>
+<input type="button" name="divide" value="Divide" onclick="divide();"/>
+
+
+</body>
+</html>

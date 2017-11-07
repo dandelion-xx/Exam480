@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+</head>
+<body>
+
+
+<form>
+<input type="text" name="email">
+<input type="submit" name="Submit">
+</form>
+
+<script>
+$("form").submit(function(){
+
+var str;
+str=$("form").serialize();
+str=$("form").contents.tostring();
+
+return true;
+
+
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<script>
+
+function Car(theyear, themake, themodel) {
+    this.year = theyear;
+    this.make = themake;
+    this.model = themodel;
+}
+
+
+var car1 = new Car(2000, "Ford", "Fusion");
+var car2 = new Car(2010, "BMW", "Z4");
+
+
+document.getElementById("demo1").innerHTML =
+"My car is " + car1.make + car1.model + " and make on " + car1.year + ". My car2 is " + car2.make; 
+</script>
+
+</body>
+</html>

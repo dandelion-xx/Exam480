@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<?xml version="1.0" ?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:svg="http://www.w3.org/2000/svg">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <!-- <svg>标签声明一个svg画布长40px宽40px -->
+    <svg width="40px" height="40px" style="border:1px solid black">
+        <!-- <g>标签可以包含多个图形合成一个组，并对组里的图形进行统一处理。transform="translate(20,20)"表示在<g>里的所有图形都会向下向右平移20px -->
+        <g transform="translate(20,20)" id="myImage">
+            <!-- <rect>可以在画布上画出一个长方形，此长方形长宽都是20px，图形中心在(-10,-10)处，但经过<g>的变换会落在(10,10)处。颜色是蓝色 -->
+            <rect id="mySquare" x="-10" y="-10" width="20" height="20" fill="blue"  />
+        </g>
+    </svg>
+    <br/>
+    <input id="speed" type="text" value="10" />
+    <button id="zoom" onclick="startAnimation();">Start</button>
+    <p id="angle"></p>
+    <script>
+        var squareShape;
+        function startAnimation() {
+            //squareShape是要转动的那个正方形
+            squareShape = document.getElementById("mySquare");
+            //初始转角为0
+            squareShape.currentTheta = 0;
+            //setInterval函数可以无限循环执行某个函数，第一个参数是要执行的函数名，第二个参数是时间间隔，单位毫秒。
+            setInterval("animateImage()",speed.value);
+            
+        }
+        //转动正方形
+        function animateImage() {
+            //正方形的transform属性是对图形进行变换，rotate(x)表示对图形旋转x度
+            squareShape.setAttribute("transform", "rotate(" + squareShape.currentTheta + ")");
+            squareShape.currentTheta += 1;
+            //显示旋转的度数
+            document.getElementById("angle").innerText = "Angle:" + squareShape.currentTheta;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+<canvas id="can" width="200" height="200">
+Your browser doesn't support canvas!
+</canvas>
+
+<video width="400" controls autoplay>
+  <source src="file:///Y|/Data/SCJ_intranet/video1.mp4" >
+  Your browser does not support HTML5 video.
+</video>
+
+
+<script type="text/javascript">
+var canvas = document.getElementById("can");
+var ctx =canvas.getContext("2d");
+ctx.fillStyle ="rgb(0,0,255)";
+ctx.fillRect(10,10,580,180);
+</script>
+
+</body>
+</html>

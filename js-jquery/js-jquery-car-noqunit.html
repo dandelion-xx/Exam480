@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>QUnit Example</title>
+ 
+</head>
+<body>
+<p id="demo"></p>
+<p id="demo2"></p>
+<script>
+var car1 ={
+year: 2000,
+make: 'Ford',
+model: 'Fusion',
+getInfo: function () {
+return 'Vehicle: ' + this.year + ' ' + this.make + ' ' + this.model;
+}
+};
+var car2={
+year: 2010,
+make: 'BMW',
+model: 'Z4',
+getInfo: function () {
+return 'Vehicle: ' + this.year + ' ' + this.make + ' ' + this.model;
+}}
+;
+
+function getVehicle(car1, car2) {
+   return "<table border='1'> <tr><th></th><th>Year</th><th>Make</th><th>Model</th></tr><tr><th>Vehicle1</th><td>"+car1.year +"</td><td>" + car1.make+ "</td><td>" + car1.model+ "</td> </tr>  <tr>  <th>Vehicle2</th>    <td>" + car2.year+ "</td>    <td>" + car2.make+ "</td>	<td>" + car2.model+ "</td>  </tr></table>";;
+}
+
+document.getElementById("demo").innerHTML = car1.getInfo()+ car2.getInfo();
+
+
+document.getElementById("demo2").innerHTML = getVehicle(car1,car2);
+
+
+</script>
+
+</body>
+</html>
