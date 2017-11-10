@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+function square(side) {
+    this.side = side;
+    this.perimeter = function (name) {
+        this.side = 4*this.side;
+    }
+}
+var c = new square(4);
+c.perimeter();
+document.getElementById("demo").innerHTML = c.side;
+
+
+
+
+/*this works too
+
+var square = new Object();
+square.side = 6;
+square.perimeter = function() {
+return this.side * 4;
+};
+
+var p = square.perimeter();
+
+document.getElementById("demo").innerHTML = p;
+*/
+
+</script>
+</body>
+</html>

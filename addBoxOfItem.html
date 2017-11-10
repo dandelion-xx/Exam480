@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<body>
+Total Product: <span id="products"></span><br/>
+Total Box: <span id="boxes" onclick="myFunction()"></span><br/>
+<input type="button" id="addOneItem" Value="Add one item to the order"/>
+<input type="button" id="addBoxOfItem" onclick="myFunction()" Value="Add a box to the order" />
+
+
+
+<script>
+
+var itemPerBox =10;
+
+$("#addBoxOfItem").click(function(event){
+for(var i=0;i < itemPerBox; i++){
+$("#addOneItem").trigger("click");
+}
+});
+function myFunction(){
+ document.getElementById("products").innerHTML=itemPerBox;
+ }
+ 
+</script>
+
+
+</body>
+</html>
