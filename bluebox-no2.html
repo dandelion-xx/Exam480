@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<style>
+.container {
+display: -ms-grid;
+-ms-grid-columns: 1fr 1fr 1fr;
+-ms-grid-rows: 1fr 1fr 1fr;
+}
+.bluebox {
+background-color: blue;
+-ms-grid-row: 2;
+-ms-grid-column: 2;
+-ms-wrap-flow: auto;
+float:none;
+}
+.text {
+-ms-grid-row: 1;
+-ms-grid-column: 1;
+-ms-grid-column-span: 3;
+-ms-grid-row-span: 3;
+}
+
+
+</style>
+<body>
+
+<div class="body">
+
+<div name="container" class="container">
+<div name="blueBox" class="blueBox">bdfg dfg fdg fdg fdg dfg</div>
+<div name="content" class="text">cdfgf dgdf gfdg dfgf d</div>
+</div> 
+
+</div>
+
+
+
+</body>
+</html>
