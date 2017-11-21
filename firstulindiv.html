@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+<div id="container">
+<ul>
+  <li>First List Item
+    <ul>
+      <li>child list item</li>
+    </ul>
+  </li>
+  <li>second</li>
+  <li>third</li>
+  <li>fourth</li>
+</ul>
+<p>some interesting</p>
+<p>more information</p>
+</div>
+<script>
+$("div#container >ul").css("border","1px solid black");
+//$("ul:first-of-type").css("border","1px solid black");
+
+</script>
+</body>
+</html>

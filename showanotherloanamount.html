@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+
+</head>
+
+<body>
+<script>
+showLoanAmounts();
+function showLoanAmounts(){
+	var loanAmount = 400;
+  function showSomeLoanAmount(){
+  	var loanAmount = 800;
+  	function showAnotherLoanAmount(){
+    	var loanAmount = 1000;
+      alert(loanAmount);
+    }
+    showAnotherLoanAmount();
+    alert(loanAmount);
+  }
+  showSomeLoanAmount();
+  alert(loanAmount);
+}</script>
+</body>
+</html>

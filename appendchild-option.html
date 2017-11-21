@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="container">
+<form id="form1">
+Select Shipping:
+<select id="shippingType">
+<option>Express</option>
+<option>Ground</option>
+</select>
+</form>
+</div>
+
+<button onclick="myFunction()">Try it</button>
+
+
+<script>
+function myFunction(){
+var option=document.getElementById("shippingType");
+var newOption =document.createElement("option");
+newOption.text="Air";
+option.appendChild(newOption)
+
+}
+
+</script>
+
+</body>
+</html>

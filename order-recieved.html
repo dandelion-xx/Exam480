@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<script>
+var ordersListing = document.getElementById("ordersListing");
+// var ordersListing contain a reference to the element named “ordersListing” in the page
+
+ordersListing.addEventListener("ordersReceived", showOrdersReceivedCount);
+//use the addEventListener method to assign the event to orderListing: the event is named “ordersReceived” (first argument of addEventListener method) an the method showOrdersReceivedCount (second argument of addEventListener method) has to be executed when event triggers
+
+ordersListing.dispatchEvent(new CustomEvent
+("ordersReceived", {
+detail: {
+orderCount: 5
+},
+bubbles: false,
+cancelable: true
+}));
+//use the dispatchEvent to raise the event: the event is named “ordersReceived” (first argument of CustomeEvent object constructor), and contains the property that fit the question request (second argument of CustomEvent Object constructor)
+
+
+</script>
+
+</body>
+</html>
